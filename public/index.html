@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncChat Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- JOIN SCREEN -->
+
+    <div id="name-prompt" class="name-prompt">
+
+        <h1>💬 SyncChat Pro</h1>
+
+        <p class="subtitle">
+            Connect and chat instantly with friends
+        </p>
+
+        <input
+            type="text"
+            id="username-input"
+            placeholder="Enter your name"
+            autocomplete="off"
+        >
+
+        <button id="join-button">
+            Join Chat
+        </button>
+
+    </div>
+
+    <!-- CHAT APP -->
+
+    <div
+        class="chat-container"
+        id="chat-container"
+        style="display:none;"
+    >
+
+        <!-- HEADER -->
+
+        <div class="chat-header">
+            💬 SyncChat Pro
+        </div>
+
+        <!-- ONLINE USERS -->
+
+        <div id="usersCount">
+            Online Users: 0
+        </div>
+
+        <!-- CHAT MESSAGES -->
+
+        <div id="chat-box"></div>
+
+        <!-- TYPING INDICATOR -->
+
+        <div id="typingIndicator"></div>
+
+        <!-- INPUT AREA -->
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="message-input"
+                placeholder="Type a message..."
+                autocomplete="off"
+            >
+
+            <button id="send-button">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
